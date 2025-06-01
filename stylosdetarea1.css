@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 115%;
+    background-color: #FCEED4;
+    color: #4B0082;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background-color: #E6E6FA;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navegación */
+nav {
+    background-color: #FFDAB9;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4B0082;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #9370DB;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Galería */
+.galeria img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+/* Tienda */
+.producto img {
+    width: 250px; /* Ajusta el ancho */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Recorta la imagen si es necesario */
+}
+.producto {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    background-color: #B8E8C7;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #9370DB;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Contacto */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #9370DB;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #FFDAB9;
+    color: #4B0082;
+}
