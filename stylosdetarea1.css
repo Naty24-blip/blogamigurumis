@@ -7,6 +7,21 @@ body {
     text-align: center;
 }
 
+/* Enlace de accesibilidad */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #fff;
+    padding: 10px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
 /* Encabezado */
 header {
     background-color: #E6E6FA;
@@ -19,30 +34,40 @@ header {
     to { opacity: 1; }
 }
 
-/* Navegación */
+/* Barra de navegación */
 nav {
+    display: inline-block;
+    width: 80%;
     background-color: #FFDAB9;
     padding: 10px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
-nav li {
+/* Comentando estilos existentes de <li> */
+/* nav li {
     margin: 10px;
-}
+} */
 
 nav a {
     text-decoration: none;
     color: #4B0082;
     transition: color 0.3s ease-in-out;
+    margin: 0 15px;
 }
 
 nav a:hover {
     color: #9370DB;
+}
+
+nav img {
+    width: 10%;
 }
 
 /* Secciones */
@@ -52,6 +77,19 @@ section {
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 20px;
+}
+
+.grid img {
+    width: 100%;
 }
 
 /* Galería */
@@ -67,11 +105,18 @@ section {
 }
 
 /* Tienda */
-.producto img {
-    width: 250px; /* Ajusta el ancho */
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Recorta la imagen si es necesario */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.producto img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+}
+
 .producto {
     display: inline-block;
     margin: 15px;
@@ -80,12 +125,14 @@ section {
     border-radius: 10px;
 }
 
+/* Botones */
 button {
     background-color: #9370DB;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    outline: 2px solid transparent;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -93,7 +140,11 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Contacto */
+button:focus {
+    outline: 2px solid #9370DB;
+}
+
+/* Formulario de contacto */
 form {
     max-width: 400px;
     margin: auto;
