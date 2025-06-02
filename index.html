@@ -3,102 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejiendo Sueños - Amigurumis y Crochet</title>
+    <meta name="description" content="Tienda de amigurumis y productos de crochet hechos a mano en Colombia. Patrones, tutoriales y creaciones artesanales.">
+    <title>Tejiendo Sueños - Amigurumis y Crochet Artesanal en Colombia</title>
     <link rel="stylesheet" href="stylosdetarea1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-      <!-- Enlace de accesibilidad -->
-     <a href="#blog" class="skip-link">Saltar al contenido principal</a>
-    <header class="scroll-effect">
-
-   
-    <!-- Encabezado con efecto de entrada -->
-    <header class="scroll-effect">
-        <h1>Tejiendo Sueños</h1>
-        <p>Un espacio para los amantes del crochet y amigurumis en Colombia</p>
+    <!-- Enlace de accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Encabezado -->
+    <header class="scroll-effect" role="banner">
+        <div class="header-content">
+            <h1>Tejiendo Sueños</h1>
+            <p>Un espacio para los amantes del crochet y amigurumis en Colombia</p>
+        </div>
     </header>
 
     <!-- Barra de navegación -->
-    <nav class="scroll-effect">
+    <nav class="scroll-effect" role="navigation" aria-label="Navegación principal">
         <ul>
-            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#galeria" aria-current="page">Galería</a></li>
             <li><a href="#tienda">Tienda</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
-    <!-- Galería de Creaciones -->
-    <section id="galeria" class="scroll-effect">
-        <h2>Mis Creaciones</h2>
-        <div class="galeria">
-            <img src="anigurumi coneja.png" alt="amigurumi 1">
-            <img src="flor conejonatu.png" alt="Amigurumi 2">
-            <img src="vaca tejida.jpg" alt="Amigurumi 3">
-        </div>
-    </section>
-
-    <!-- Tienda -->
-    <section id="tienda" class="scroll-effect">
-        <h2>Compra Mis Creaciones</h2>
-        <div class="productos">
-            <div class="producto">
-                <img src="bailarina tejida.jpg" alt="Producto 1">
-                <p>velerina tejida- $80,000 COP</p>
-                <button>Comprar</button>
+    <main id="main-content" role="main">
+        <!-- Galería de Creaciones -->
+        <section id="galeria" class="scroll-effect" aria-labelledby="galeria-heading">
+            <h2 id="galeria-heading">Mis Creaciones</h2>
+            <div class="galeria">
+                <figure>
+                    <img src="anigurumi coneja.png" alt="Conejo amigurumi tejido a mano en colores pastel" loading="lazy">
+                    <figcaption>Conejita de primavera</figcaption>
+                </figure>
+                <figure>
+                    <img src="flor conejonatu.png" alt="Flor con diseño de conejo en técnica amigurumi" loading="lazy">
+                    <figcaption>Flor conejito</figcaption>
+                </figure>
+                <figure>
+                    <img src="vaca tejida.jpg" alt="Vaca amigurumi tejida con lana multicolor" loading="lazy">
+                    <figcaption>Vaca lechera</figcaption>
+                </figure>
             </div>
-            <div class="producto">
-                <img src="valiente tejida.jpg" alt="Producto 2">
-                <p>Princesa Disney Valiente- $60,000 COP</p>
-                <button>Comprar</button>
+        </section>
+
+        <!-- Tienda -->
+        <section id="tienda" class="scroll-effect" aria-labelledby="tienda-heading">
+            <h2 id="tienda-heading">Compra Mis Creaciones</h2>
+            <div class="productos">
+                <article class="producto" itemscope itemtype="https://schema.org/Product">
+                    <img src="bailarina tejida.jpg" alt="Bailarina de ballet tejida a crochet" loading="lazy" itemprop="image">
+                    <h3 itemprop="name">Bailarina tejida</h3>
+                    <p itemprop="description">Hermosa bailarina de ballet con tutú rosado</p>
+                    <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency" content="COP">$</span>
+                        <span itemprop="price" content="80000">80,000 COP</span>
+                    </p>
+                    <button aria-label="Añadir Bailarina tejida al carrito">Comprar</button>
+                </article>
+                
+                <article class="producto" itemscope itemtype="https://schema.org/Product">
+                    <img src="valiente tejida.jpg" alt="Princesa Disney Valiente tejida a crochet" loading="lazy" itemprop="image">
+                    <h3 itemprop="name">Princesa Valiente</h3>
+                    <p itemprop="description">Princesa Merida de la película Valiente</p>
+                    <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency" content="COP">$</span>
+                        <span itemprop="price" content="60000">60,000 COP</span>
+                    </p>
+                    <button aria-label="Añadir Princesa Valiente al carrito">Comprar</button>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog -->
-    <section id="blog" class="scroll-effect">
-        <h2>Blog para Tejedores</h2>
-        <article>
-            <h3>Patrón básico de amigurumi</h3>
-         <p>Aprende a tejer tu primer amigurumi
-            1. Materiales Básico   Antes de empezar, asegúrate de tener:
-            - Lana o hilo (para principiantes, se recomienda lana gruesa).
-            - Agujas de tejer (de tamaño medio, como 5mm o 6mm).
-            - Tijeras para cortar el hilo.
-            - Aguja lanera para rematar los hilos al final.
-         2. Montar los Puntos
-              El primer paso es montar los puntos en la aguja:
-              - Haz un nudo corredizo y colócalo en la aguja.
-              - Sostén la aguja con el nudo en tu mano derecha y la lana en la izquierda.
-              - Envuelve la lana alrededor de la aguja y pásala a través del nudo.
-            - Repite hasta tener el número de puntos deseado.
+        <!-- Blog -->
+        <section id="blog" class="scroll-effect" aria-labelledby="blog-heading">
+            <h2 id="blog-heading">Blog para Tejedores</h2>
+            <article>
+                <h3>Patrón básico de amigurumi</h3>
+                <section>
+                    <h4>1. Materiales Básicos</h4>
+                    <p>Antes de empezar, asegúrate de tener:</p>
+                    <ul>
+                        <li>Lana o hilo (para principiantes, se recomienda lana gruesa)</li>
+                        <li>Agujas de crochet (de tamaño medio, como 3.5mm o 4mm)</li>
+                        <li>Tijeras para cortar el hilo</li>
+                        <li>Aguja lanera para rematar los hilos al final</li>
+                        <li>Relleno sintético</li>
+                        <li>Marcador de puntos</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h4>2. Montar los Puntos</h4>
+                    <p>El primer paso es montar los puntos en la aguja:</p>
+                    <ol>
+                        <li>Haz un nudo corredizo y colócalo en la aguja</li>
+                        <li>Sostén la aguja con el nudo en tu mano derecha y la lana en la izquierda</li>
+                        <li>Envuelve la lana alrededor de la aguja y pásala a través del nudo</li>
+                        <li>Repite hasta tener el número de puntos deseado</li>
+                        <li>Crea un anillo mágico para comenzar tu amigurumi</li>
+                    </ol>
+                </section>
+                
+                <a href="#" class="read-more" aria-label="Leer más sobre patrones básicos de amigurumi">Leer más</a>
+            </article>
+        </section>
 
-             </p>
-            <a href="#">Leer más</a>
-        </article>
- </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="scroll-effect">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        <!-- Contacto -->
+        <section id="contacto" class="scroll-effect" aria-labelledby="contacto-heading">
+            <h2 id="contacto-heading">Contacto</h2>
+            <form id="form-contacto" aria-label="Formulario de contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                        <option value="consulta">Consulta general</option>
+                        <option value="pedido">Pedido especial</option>
+                        <option value="taller">Información sobre talleres</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
 
     <!-- Pie de página -->
-    <footer class="scroll-effect">
-        <p>&copy; 2025 Tejiendo Sueños | Creado con amor por Natalia Morales</p>
+    <footer class="scroll-effect" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tejiendo Sueños</h3>
+                <p>Creaciones artesanales hechas con amor en Colombia</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <ul class="social-links">
+                    <li><a href="#" aria-label="Instagram de Tejiendo Sueños"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook de Tejiendo Sueños"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" aria-label="YouTube de Tejiendo Sueños"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <address>
+                    <p><i class="fas fa-envelope"></i> hola@tejiendosueños.com</p>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+                </address>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; <span id="year"></span> Tejiendo Sueños | Creado con amor por Natalia Morales</p>
+            <p>Todos los derechos reservados</p>
+        </div>
     </footer>
 
-    <!-- Importar ScrollReveal -->
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="efectos tarea1.js"></script>
+    <script>
+        // Actualizar año en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
